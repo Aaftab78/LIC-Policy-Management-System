@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIC Policy Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>LIC Policy Management System</h1>
+
+    <form id="customer-form">
+        <input type="hidden" id="customer-id">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="contact_information" placeholder="Contact Information" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <input type="date" id="date_of_birth" placeholder="Date of Birth" required>
+        <input type="text" id="occupation" placeholder="Occupation" required>
+        <button type="submit">Add Customer</button>
+    </form>
+
+    <h2>Customer List</h2>
+    <ul id="customer-list"></ul>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
